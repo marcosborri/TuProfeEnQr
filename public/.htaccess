@@ -1,0 +1,8 @@
+RewriteEngine On
+
+#Aceptar cargar archivos y carpetas que sean válidos
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#Cualquiera otra cosa que no sea válida, ni se encuentre como archivo o carpeta, lo manda al index.php
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
