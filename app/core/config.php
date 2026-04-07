@@ -8,7 +8,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     define('DBUSER', 'root');
     define('DBPASS', '');
 
-   define('ROOT', 'http://localhost/mvc/public'); 
+   define('ROOT', 'http://localhost/tuprofeenqr/public'); 
 } else {
     define('ROOT', 'http://www.lawebmechita.com');
 }
