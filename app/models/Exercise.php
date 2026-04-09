@@ -34,7 +34,7 @@ class Exercise {
         if(empty($data['image'])){
             $this->errors = 'Se requiere una imagen para el ejercicio';
         }
-
+        
         if(empty($this->errors)){
             return true;
         }

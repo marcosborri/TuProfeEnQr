@@ -12,9 +12,10 @@ class Upload extends Controller {
                 $Exercise->insert($_POST);
                 redirect('home');
             }
+            $data['errors'] = $Exercise->errors;
         }
 
-        $this->view('upload');
+        $this->view('upload', $data);
     }
 
 
