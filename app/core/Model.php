@@ -9,6 +9,7 @@ trait Model
 
     protected $limit = 10;
     protected $offset = 0;
+    public $errors = [];
 
     /*Va a devolver una fila, no tenemos que poner query como en get_row, acá las query son auto-generadas */
     public function first($data, $data_not)
