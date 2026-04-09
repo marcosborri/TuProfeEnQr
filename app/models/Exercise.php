@@ -10,4 +10,6 @@ class Exercise {
 
     /*Para no guardar cosas al pedo en el método post, y dejar habilitadas solo columnas a edición */
     protected $allowedColumns = ['title', 'content', 'image'];
+
+    
 }
