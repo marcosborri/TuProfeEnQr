@@ -1,6 +1,7 @@
 <?php
 
-class Exercise {
+class Exercise
+{
 
     /*Usamos la trait Modelo */
     use Model;
@@ -12,33 +13,36 @@ class Exercise {
     /*Para no guardar cosas al pedo en el método post, y dejar habilitadas solo columnas a edición */
     protected $allowedColumns = ['title', 'content', 'image'];
 
-    public function validate($data){
+    public function validate($data, $files)
+    {
         $this->errors = [];
-        if(empty($data['title'])){
-            $this->errors = 'Se requiere un título para el ejercicio';
+
+        // TÍTULO
+        if (empty(trim($data['title']))) {
+            $this->errors['title'] = 'Se requiere un título';
         }
 
-        else if (!filter_var($data['title'], FILTER_SANITIZE_SPECIAL_CHARS)) {
-            $this->errors = 'Título no es válido';
-        }
-        
-        if(empty($data['content'])){
-            $this->errors = 'Se requiere un contenido para el ejercicio';
-        }
-
-        $data['content'] = strip_tags(
-            $data['content'],
-            '<h1><h2><h3><p><strong><em><ul><ol><li><br>'
-        );
-        
-        if(empty($data['image'])){
-            $this->errors = 'Se requiere una imagen para el ejercicio';
-        }
-        
-        if(empty($this->errors)){
-            return true;
+        // CONTENIDO
+        if (empty(trim($data['content']))) {
+            $this->errors['content'] = 'Se requiere contenido';
+        } else {
+            $data['content'] = strip_tags(
+                $data['content'],
+                '<h1><h2><h3><p><strong><em><ul><ol><li><br>'
+            );
         }
 
-        return false;
+        // IMAGEN
+        if (empty($files['image']['name'])) {
+            $this->errors['image'] = 'Se requiere una imagen';
+        } else {
+            $allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
+
+            if (!in_array($files['image']['type'], $allowedTypes)) {
+                $this->errors['image'] = 'Formato no válido';
+            }
+        }
+
+        return empty($this->errors);
     }
 }
