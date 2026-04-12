@@ -15,5 +15,10 @@
     <input type="file" name="image">
     <button type="submit">Guardar</button>
 </form>
+<?php if(!empty($errors)) :?>
+    <div class="errors">
+      <?= implode("<br>", $errors) ?>
+    </div>
+<?php endif;?>
 
 <script src="<?= ROOT ?>/assets/js/form.js"></script>
