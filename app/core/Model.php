@@ -12,7 +12,7 @@ trait Model
     public $errors = [];
 
     /*Va a devolver una fila, no tenemos que poner query como en get_row, acá las query son auto-generadas */
-    public function first($data, $data_not)
+    public function first($data, $data_not = [])
     {
         $keys = array_keys($data);
         $keys_not = array_keys($data_not);
