@@ -8,12 +8,16 @@ class Upload extends Controller {
 
         if($_SERVER['REQUEST_METHOD'] == "POST"){
 
-            $Exercise = new Exercise;
+            $exercise = new Exercise;
 
-            if($Exercise->validate($_POST, $_FILES)){
+            if($exercise->validate($_POST, $_FILES)){
+
+                //Sanitizamos content
+                $cleanData = $exercise->sanitize($_POST);
 
                 $folder = "assets/images/";
 
+                /*Si no está la carpeta images, la crea */
                 if(!is_dir($folder)){
                     mkdir($folder, 0777, true);
                 }
@@ -25,14 +29,14 @@ class Upload extends Controller {
                     $folder . $imageName
                 );
 
-                $_POST['image'] = "/" . $folder . $imageName;
+                $cleanData['image'] = "/" . $folder . $imageName;
 
-                $Exercise->insert($_POST);
+                $exercise->insert($cleanData);
 
                 redirect('home');
             }
 
-            $data['errors'] = $Exercise->errors;
+            $data['errors'] = $exercise->errors;
         }
 
         $this->view('upload', $data);

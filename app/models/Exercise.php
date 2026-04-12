@@ -20,16 +20,14 @@ class Exercise
         // TÍTULO
         if (empty(trim($data['title']))) {
             $this->errors['title'] = 'Se requiere un título';
+        } else if ($data['title'] !== strip_tags($data['title'])) {
+            $this->errors['title'] = 'No se permiten etiquetas HTML';
         }
+
 
         // CONTENIDO
         if (empty(trim($data['content']))) {
             $this->errors['content'] = 'Se requiere contenido';
-        } else {
-            $data['content'] = strip_tags(
-                $data['content'],
-                '<h1><h2><h3><p><strong><em><ul><ol><li><br>'
-            );
         }
 
         // IMAGEN
@@ -44,5 +42,15 @@ class Exercise
         }
 
         return empty($this->errors);
+    }
+
+    public function sanitize($data)
+    {
+        $data['content'] = strip_tags(
+            $data['content'],
+            '<h1><h2><h3><p><strong><em><ul><ol><li><br>'
+        );
+
+        return $data;
     }
 }
