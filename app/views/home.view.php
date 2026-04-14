@@ -1,3 +1,5 @@
+<?php require 'partials/header.php'?>
+
 <h1>Vista de Home</h1>
 
 
@@ -19,3 +21,5 @@
     <?php endif?>
 
 <?php endforeach ?>
+
+<?php require 'partials/footer.php'?>
