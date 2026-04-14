@@ -9,7 +9,10 @@
     <img src="<?= ROOT ?><?= $exercise->image ?>">
 
     <?php if ($_SESSION['USER']): ?>
-        <button type="button">Eliminar</button>
+        <button onclick="<?php $ex = new Exercise; 
+        $ex->delete($exercise->id) ?>" 
+        
+        name="delete" type="button">Eliminar</button>
     <?php endif?>
 
 <?php endforeach ?>
