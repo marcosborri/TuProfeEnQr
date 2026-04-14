@@ -12,6 +12,38 @@ body {
     min-height: 100vh;
 }
 
+.main {
+    display: flex;
+    flex: 1;
+}
+
+.exercises-container {
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+    padding: 20px;
+}
+
+.exercise-card {
+    display: flex;
+    flex-direction: column;
+    width: 600px; 
+    height: auto;  
+    padding: 15px;
+    background-color: #B5D6EB; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.exercise-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 5px;
+}
 
 .header {
     display: grid;
@@ -53,6 +85,6 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 2vw;
+    height: 5%;
     background-color: #4386D0;
 }
