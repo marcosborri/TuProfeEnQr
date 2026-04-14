@@ -1,18 +1,21 @@
 <h1>Vista de Home</h1>
 
 
-<?php foreach ($exercise as $exercise): ?>
+<?php foreach ($exercise as $item): ?>
     <h1><?= $exercise->title ?></h1>
 
-    <div class="text"><?= $exercise->content ?></div>
+    <div class="text"><?= $item->content ?></div>
 
-    <img src="<?= ROOT ?><?= $exercise->image ?>">
+    <img src="<?= ROOT ?><?= $item->image ?>">
 
     <?php if ($_SESSION['USER']): ?>
-        <button onclick="<?php $ex = new Exercise; 
-        $ex->delete($exercise->id) ?>" 
-        
-        name="delete" type="button">Eliminar</button>
+        <form method="POST" action="<?= ROOT ?>/home/delete">
+            <input type="hidden" name="id" value="<?= $item->id ?>">
+
+            <button type="submit" onclick="return confirm('¿Seguro que querés eliminar este ejercicio?')">
+                Eliminar
+            </button>
+        </form>
     <?php endif?>
 
 <?php endforeach ?>

@@ -4,6 +4,11 @@ class Upload extends Controller {
 
     public function index()
     {
+        
+        if(!isset($_SESSION['USER'])){
+            die("Acceso no autorizado");
+        }
+        
         $data = [];
 
         if($_SERVER['REQUEST_METHOD'] == "POST"){
