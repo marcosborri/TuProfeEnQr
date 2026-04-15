@@ -1,15 +1,16 @@
+main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
 body {
     background-image: url('../images/fondo.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
-main {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    padding: 40px 20px;
 }
 
 .exercise-container {
@@ -22,7 +23,7 @@ main {
     border-radius: 20px;
     gap: 30px;
 
-    background-color: #f6f1ea;
+    background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
