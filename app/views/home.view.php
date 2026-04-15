@@ -2,7 +2,7 @@
 <main class = "main">
     <section class = "exercises-container">
         <?php foreach ($exercise as $item): ?>
-            <div class="exercise-card">
+            <div class="exercise-card" onclick="window.location='<?= ROOT ?>/home/exercise/<?= $item->id ?>';">
                 <h1><?= $item->title ?></h1>
 
                 <div class="text"><?= $item->content ?></div>
