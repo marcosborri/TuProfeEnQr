@@ -32,4 +32,23 @@ class Home extends Controller {
 
 
     }
+
+    public function exercise($id) {
+
+        $exercise = new Exercise;
+
+        $params['id'] = $id;
+
+        $exerciseData['exercise'] = $exercise->first($params);
+
+
+        if(!$exerciseData['exercise']) {
+            $this->view('404');
+        } else {
+            $this->view('exercise', $exerciseData); 
+        }
+
+    
+    }
+
 }
