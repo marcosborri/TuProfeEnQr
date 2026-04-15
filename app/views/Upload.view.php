@@ -1,3 +1,5 @@
+<?php require 'partials/header.php'?>
+
 <form method="POST" enctype="multipart/form-data" id="main-form">
     <input type="text" name="title" placeholder="Nombre del ejercicio">
 
@@ -22,3 +24,5 @@
 <?php endif;?>
 
 <script src="<?= ROOT ?>/assets/js/form.js"></script>
+
+<?php require 'partials/footer.php'?>

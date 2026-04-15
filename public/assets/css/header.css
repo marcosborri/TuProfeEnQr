@@ -1,0 +1,90 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+}
+
+.exercises-container {
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+    padding: 20px;
+}
+
+.exercise-card {
+    display: flex;
+    flex-direction: column;
+    width: 600px; 
+    height: auto;  
+    padding: 15px;
+    background-color: #B5D6EB; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.exercise-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 5px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    background-color: #D08E43;
+    height: 60px;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.header .mechavive {
+    grid-column: 2; 
+    justify-self: center;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header ul {
+    grid-column: 3; 
+    justify-self: end;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5%;
+    background-color: #4386D0;
+}

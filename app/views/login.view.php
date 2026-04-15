@@ -1,3 +1,5 @@
+<?php require 'partials/header.php'?>
+
 <form method="POST">
 
     <label for="email">Email:</label>
@@ -14,3 +16,4 @@
     <div class="error"><?= implode('<br>', $errors) ?></div>
 <?php endif ?>
 
+<?php require 'partials/footer.php'?>
