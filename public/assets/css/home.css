@@ -44,6 +44,11 @@ body {
     color: #FC8021;
     text-align: center;
     line-height: 1.2;
+
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .exercise-card:hover {
@@ -54,10 +59,9 @@ body {
 .exercise-card img {
     width: 100%;
     height: 220px;
-    object-fit: contain;
-    border-radius: 12px;
+    object-fit: cover;
+    border-radius: 22px;
     padding: 10px;
-    background: rgba(255,255,255,0.04);
 }
 
 .exercise-card form {
