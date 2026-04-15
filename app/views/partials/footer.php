@@ -1,7 +1,7 @@
 
   <footer>
     <p>
-      contacto: brunoganzero - 2026 ©.
+      contacto: tuprofeenqr@gmail.com
     </p>
   </footer>
   

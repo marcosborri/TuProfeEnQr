@@ -1,6 +1,20 @@
-<?php require 'partials/header.php'?>
+<?php require 'partials/header.php' ?>
 
-<h1><?= $exercise->title ?></h1>
+<link rel="stylesheet" href="<?= ROOT ?>/assets/css/exercise.css">
+
+<main>
+
+    <div class="exercise-container">
+
+        <h1 class="exercise-title"><?= $exercise->title ?></h1>
+
+        <img src="<?= ROOT ?>/<?= $exercise->image ?>">
+
+        <div class="exercise-content"><?= $exercise->content ?></div>
+
+    </div>
+
+</main>
 
 
-<?php require 'partials/footer.php'?>
+<?php require 'partials/footer.php' ?>
