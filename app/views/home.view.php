@@ -1,11 +1,11 @@
+<link rel="stylesheet" href="<?= ROOT ?>/assets/css/home.css">
 <?php require 'partials/header.php'?>
+
 <main class = "main">
     <section class = "exercises-container">
         <?php foreach ($exercise as $item): ?>
             <div class="exercise-card">
                 <h1><?= $item->title ?></h1>
-
-                <div class="text"><?= $item->content ?></div>
 
                 <img src="<?= ROOT ?><?= $item->image ?>">
 
