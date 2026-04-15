@@ -11,7 +11,7 @@
 <body>
   <header class="header">
 
-    <a class="mechavive"href="<?= ROOT ?>/home">Tu Profe en QR</a>
+    <a class="header-title"href="<?= ROOT ?>/home">Tu Profe en QR</a>
 
     <ul>
       <?php if($_SESSION['USER']): ?>
