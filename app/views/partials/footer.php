@@ -6,7 +6,7 @@ $parts = explode('@', CONTACT_EMAIL);
 
 <footer>
   <p id="email-container">
-    </p>
+  </p>
 </footer>
 
 <script>
@@ -20,7 +20,7 @@ $parts = explode('@', CONTACT_EMAIL);
     
     link.href = `mailto:${user}@${domain}`;
     link.className = 'contact-link';
-    link.innerText = 'Contactame';
+    link.innerText = 'Contacto';
     
     container.appendChild(link);
   })();
