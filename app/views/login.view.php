@@ -1,5 +1,7 @@
+<?php require 'partials/header.php' ?>
 <link rel="stylesheet" href="<?= ROOT ?>/assets/css/login.css">
-<?php require 'partials/header.php'?>
+
+
 
 <form class="login-form" method="POST">
 
@@ -12,8 +14,10 @@
 
 </form>
 
-<?php if(!empty($errors)): ?>
+<?php if (!empty($errors)): ?>
     <div class="error"><?= implode('<br>', $errors) ?></div>
 <?php endif ?>
 
-<?php require 'partials/footer.php'?>
+
+
+<?php require 'partials/footer.php' ?>

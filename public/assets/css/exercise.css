@@ -4,17 +4,6 @@ main {
     justify-content: center;
     padding: 40px 20px;
 }
-<<<<<<< HEAD
-
-body {
-    background-image: url('../images/fondo.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-=======
->>>>>>> 3c0431fb618e4dfd47b0abfd863dc3b32ff8e811
 
 .exercise-container {
     display: flex;
@@ -26,7 +15,7 @@ body {
     border-radius: 20px;
     gap: 30px;
 
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
