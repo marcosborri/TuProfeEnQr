@@ -9,6 +9,6 @@ class User {
     protected $table = 'users';
 
     /*Para no guardar cosas al pedo en el método post, y dejar habilitadas solo columnas a edición */
-    protected $allowedColumns = ['email', 'password'];
+    protected $allowedColumns = ['username', 'password'];
 
 }
