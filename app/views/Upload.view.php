@@ -1,28 +1,38 @@
-<?php require 'partials/header.php'?>
+<?php require 'partials/header.php' ?>
+<link rel='stylesheet' href='<?= ROOT ?>/assets/css/upload.css'>
 
-<form method="POST" enctype="multipart/form-data" id="main-form">
-    <input type="text" name="title" placeholder="Nombre del ejercicio">
+<main>
+    <div class="upload-container">
 
-    <div class="toolbar">
-        <button type="button" onclick="execCmd('bold')"><b>B</b></button>
-        <button type="button" onclick="execCmd('italic')"><i>I</i></button>
-        <button type="button" onclick="execCmd('formatBlock', 'h2')">H2</button>
-        <button type="button" onclick="execCmd('insertUnorderedList')">Lista</button>
+        <form method="POST" enctype="multipart/form-data" id="main-form">
+            <input class="upload-title" type="text" name="title" placeholder="Nombre del ejercicio">
+
+            <div class="toolbar">
+                <button type="button" onclick="execCmd('bold')"><b>Negrita</b></button>
+                <button type="button" onclick="execCmd('formatBlock', 'H2')">Título</button>
+            </div>
+
+            <div class="textarea" id="visual-editor" contenteditable="true"></div>
+
+            <input type="hidden" name="content" id="hidden-content">
+
+            <label class="file-label">
+                Seleccionar imagen
+                <input type="file" name="image" hidden>
+            </label>
+            <button class="upload-submit" type="submit">Guardar</button>
+        </form>
+        <?php if (!empty($errors)) : ?>
+            <div class="errors">
+                <?= implode("<br>", $errors) ?>
+            </div>
+        <?php endif; ?>
+
     </div>
+</main>
 
-    <div id="visual-editor" contenteditable="true" style="border: 1px solid #ccc; min-height: 200px; padding: 10px;"></div>
 
-    <input type="hidden" name="content" id="hidden-content">
-
-    <input type="file" name="image">
-    <button type="submit">Guardar</button>
-</form>
-<?php if(!empty($errors)) :?>
-    <div class="errors">
-      <?= implode("<br>", $errors) ?>
-    </div>
-<?php endif;?>
 
 <script src="<?= ROOT ?>/assets/js/form.js"></script>
 
-<?php require 'partials/footer.php'?>
+<?php require 'partials/footer.php' ?>

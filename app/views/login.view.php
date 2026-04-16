@@ -15,8 +15,10 @@
     </form>
 </div>
 
-<?php if(!empty($errors)): ?>
+<?php if (!empty($errors)): ?>
     <div class="error"><?= implode('<br>', $errors) ?></div>
 <?php endif ?>
 
-<?php require 'partials/footer.php'?>
+
+
+<?php require 'partials/footer.php' ?>
