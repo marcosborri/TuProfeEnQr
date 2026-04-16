@@ -7,6 +7,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     define('DBPORT', '3310');
     define('DBUSER', 'root');
     define('DBPASS', '');
+    define('CONTACT_EMAIL', 'tuprofeenqr@gmail.com');
 
    define('ROOT', 'http://localhost/tuprofeenqr/public'); 
 } else {
