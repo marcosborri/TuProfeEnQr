@@ -1,18 +1,19 @@
-<?php require 'partials/header.php' ?>
+
+<?php require 'partials/header.php'?>
 <link rel="stylesheet" href="<?= ROOT ?>/assets/css/login.css">
 
+<div class="login-container">
+    <form class="login-form" method="POST">
 
+        <label class="form-username-label" for="username">Usuario:</label>
+        <input class="form-username-input" type="text" name="username" placeholder="ingrese su usuario">
 
-<form class="login-form" method="POST">
+        <label class="form-password-label" for="password">Contraseña:</label>
+        <input class="form-password-input" type="password" name="password" placeholder="ingrese su contraseña">
+        <button class="form-submit-button" type="submit">Ingresar</button>
 
-    <label class="form-email-label" for="email">Email:</label>
-    <input class="form-email-input" type="email" name="email" placeholder="ingrese su email">
-
-    <label class="form-password-label" for="password">Contraseña:</label>
-    <input class="form-password-input" type="password" name="password" placeholder="ingrese su contraseña">
-    <button class="form-submit-button" type="submit">Ingresar</button>
-
-</form>
+    </form>
+</div>
 
 <?php if (!empty($errors)): ?>
     <div class="error"><?= implode('<br>', $errors) ?></div>

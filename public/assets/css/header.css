@@ -60,8 +60,15 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 45px;
-    color: #FC8021;
+    min-height: 60px;
     background-color: #1B1E26;
     box-shadow: 0 -4px 10px rgba(252, 128, 33, 0.5);
+}
+
+.contact-link {
+    color: #FC8021;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 20px;
 }
