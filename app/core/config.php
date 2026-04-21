@@ -11,7 +11,15 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 
    define('ROOT', 'http://localhost/tuprofeenqr/public'); 
 } else {
-    define('ROOT', 'http://www.lawebmechita.com');
+        /* Database config */
+    define('DBNAME', 'profeqr');
+    define('DBHOST', 'localhost');
+    define('DBPORT', '3310');
+    define('DBUSER', 'root');
+    define('DBPASS', '');
+    define('CONTACT_EMAIL', 'tuprofeenqr@gmail.com');
+
+   define('ROOT', 'http://deploy/tuprofeenqr/public'); 
 }
 
 /*True = Desarrollo - False = Producción */

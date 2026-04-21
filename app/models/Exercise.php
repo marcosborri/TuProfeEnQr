@@ -34,7 +34,7 @@ class Exercise
         if (empty($files['image']['name'])) {
             $this->errors['image'] = 'Se requiere una imagen';
         } else {
-            $allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
+            $allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
 
             if (!in_array($files['image']['type'], $allowedTypes)) {
                 $this->errors['image'] = 'Formato no válido';
