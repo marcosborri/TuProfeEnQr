@@ -47,11 +47,11 @@ main {
     }
 
     .exercise-title {
-        font-size: 28px; /* Título más pequeño en móviles */
+        font-size: 28px;
     }
 
     .exercise-container img {
-        width: 100%; /* La imagen ocupa todo el ancho disponible */
+        width: 100%;
         max-width: 400px;
     }
 
