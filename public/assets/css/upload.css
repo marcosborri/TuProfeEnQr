@@ -54,7 +54,13 @@ main {
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.toolbar button.active {
+    background-color: #40DBFC;
+}
+
 
 
 #visual-editor {
@@ -92,6 +98,7 @@ main {
     color: #1B1E26;
     transition: all 0.2s ease;
 }
+
 
 
 .errors {

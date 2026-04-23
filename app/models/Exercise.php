@@ -48,7 +48,7 @@ class Exercise
     {
         $data['content'] = strip_tags(
             $data['content'],
-            '<h1><h2><h3><p><strong><em><ul><ol><li><br>'
+            '<h1><h2><h3><p><strong><b><em><ul><ol><li><br>'
         );
 
         return $data;
