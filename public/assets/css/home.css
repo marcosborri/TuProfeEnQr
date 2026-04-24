@@ -61,3 +61,26 @@
     color: black;
     border-radius: 5px;
 }
+
+@media (max-width: 600px) {
+    .exercises-container {
+        padding: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+        gap: 15px;
+    }
+
+    .exercise-card img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 350px) {
+    .exercises-container {
+        padding: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+    
+    .exercise-card {
+        width: 100%;
+    }
+}
