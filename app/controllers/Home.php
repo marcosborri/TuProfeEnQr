@@ -24,8 +24,14 @@ class Home extends Controller {
 
             $id = $_POST['id'];
 
-            $exercise = new Exercise;
-            $exercise->delete($id);
+            $exerciseModel = new Exercise;
+            $exercise = $exerciseModel->first($_POST);
+
+            $image = dirname(__DIR__, 2) . "/public" . $exercise->image;
+
+            unlink($image);
+
+            $exerciseModel->delete($id);
 
             redirect('home');
         }
