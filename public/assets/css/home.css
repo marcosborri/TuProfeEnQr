@@ -87,7 +87,7 @@
 
 .exercise-content p, 
 .exercise-card p {
-    text-align: left !important; /* Cambia a justify si prefieres, pero esto quita el estilo pegado */
+    text-align: left !important; 
     line-height: 1.5 !important;
     margin-bottom: 1rem !important;
 }
