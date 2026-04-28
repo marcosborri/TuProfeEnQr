@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <div class="background-overlay"></div>
   <header class="header">
 
     <a class="header-title"href="<?= ROOT ?>/home">Tu Profe en QR 💪</a>
