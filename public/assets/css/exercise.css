@@ -1,0 +1,68 @@
+main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.exercise-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    border-radius: 20px;
+    gap: 30px;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.exercise-title {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.exercise-container img {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.exercise-content {
+    width: 100%;
+    line-height: 1.8;
+    font-size: 18px;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+@media (max-width: 600px) {
+    .exercise-container {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .exercise-title {
+        font-size: 28px;
+    }
+
+    .exercise-container img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .exercise-content {
+        font-size: 16px;
+    }
+}
+
+.exercise-content p, 
+.exercise-card p {
+    text-align: left !important; /* Cambia a justify si prefieres, pero esto quita el estilo pegado */
+    line-height: 1.5 !important;
+    margin-bottom: 1rem !important;
+}

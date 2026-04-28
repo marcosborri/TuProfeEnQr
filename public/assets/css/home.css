@@ -1,0 +1,93 @@
+.main {
+    display: block;
+    flex: 1;
+    width: 100%;
+    background: none;
+}
+
+.exercises-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 25px;
+    padding: 30px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.exercise-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #1B1E26;
+    border-radius: 12px;
+    padding: 15px;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.exercise-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FC8021;
+    text-align: center;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.exercise-card img {
+    display: block; 
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: auto;
+    
+}
+
+.exercise-card form {
+    margin-top: 15px;
+}
+
+.exercise-card button {
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #FC8021;
+    border: none;
+    color: black;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .exercises-container {
+        padding: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+        gap: 15px;
+    }
+
+    .exercise-card img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 350px) {
+    .exercises-container {
+        padding: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+    
+    .exercise-card {
+        width: 100%;
+    }
+}
+
+.exercise-content p, 
+.exercise-card p {
+    text-align: left !important; /* Cambia a justify si prefieres, pero esto quita el estilo pegado */
+    line-height: 1.5 !important;
+    margin-bottom: 1rem !important;
+}
