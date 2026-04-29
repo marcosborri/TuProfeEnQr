@@ -36,7 +36,8 @@ class Editexercise extends Controller {
                     $cleanData['image'] = $data['row']->image;
                 }
 
-                
+                $image = dirname(__DIR__, 2) . "/public" . $data['row']->image;
+                unlink($image);
                 $exerciseModel->update($id, $cleanData);
                 redirect('home');
             }
