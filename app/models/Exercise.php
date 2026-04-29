@@ -13,7 +13,7 @@ class Exercise
     /*Para no guardar cosas al pedo en el método post, y dejar habilitadas solo columnas a edición */
     protected $allowedColumns = ['title', 'content', 'image'];
 
-    public function validate($data, $files)
+    public function validate($data, $files, $isUpdate = false)
     {
         $this->errors = [];
 
@@ -31,15 +31,21 @@ class Exercise
         }
 
         // IMAGEN
-        if (empty($files['image']['name'])) {
-            $this->errors['image'] = 'Se requiere una imagen';
-        } else {
-            $allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
 
-            if (!in_array($files['image']['type'], $allowedTypes)) {
-                $this->errors['image'] = 'Formato no válido';
+        if (!$isUpdate) {
+
+            if (empty($files['image']['name'])) {
+                $this->errors['image'] = 'Se requiere una imagen';
+            } else {
+                $allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+
+                if (!in_array($files['image']['type'], $allowedTypes)) {
+                    $this->errors['image'] = 'Formato no válido';
+                }
             }
         }
+
+
 
         return empty($this->errors);
     }
