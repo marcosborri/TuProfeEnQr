@@ -40,32 +40,43 @@
 
 .exercise-card img {
     display: block; 
-    max-width: 100%;
+    width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
-    margin-top: auto;
-    
+    margin: auto 0;
 }
 
-.exercise-card form {
+.exercise-card .admin-buttons {
+    display: flex;
+    gap: 10px;
     margin-top: 15px;
+    width: 100%;
+    align-items: stretch;
 }
 
-.exercise-card button {
-    width: 100%;
-    padding: 8px;
+.exercise-card .admin-buttons form {
+    margin-top: 0;
+    flex: 1;
+}
+
+.exercise-card .admin-buttons button {
+    width: 100%; 
+    height: 100%;
+    padding: 10px 5px;
     cursor: pointer;
     background-color: #FC8021;
     border: none;
     color: black;
     border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.exercise-card .admin-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+.exercise-card .admin-buttons > button {
+    flex: 1; 
 }
 
 @media (max-width: 600px) {
