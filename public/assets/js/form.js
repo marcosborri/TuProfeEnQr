@@ -15,6 +15,10 @@ document.getElementById('main-form').addEventListener('submit', function(e) {
     document.getElementById('hidden-content').value = htmlIntermedio;
 }); 
 
-document.getElementById('visual-editor').addEventListener('input', function() {
-document.getElementById('hidden-content').value = this.innerHTML;
+//FILE-BUTTON
+const fileInput = document.getElementById('file-upload');
+const fileMessage = document.getElementById('file-message');
+
+fileInput.addEventListener('change', function() {
+    fileMessage.textContent = "Imagen seleccionada"
 });
