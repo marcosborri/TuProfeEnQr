@@ -14,3 +14,7 @@ document.getElementById('main-form').addEventListener('submit', function(e) {
     const htmlIntermedio = document.getElementById('visual-editor').innerHTML;
     document.getElementById('hidden-content').value = htmlIntermedio;
 }); 
+
+document.getElementById('visual-editor').addEventListener('input', function() {
+document.getElementById('hidden-content').value = this.innerHTML;
+});
