@@ -12,11 +12,11 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
    define('ROOT', 'http://localhost/tuprofeenqr/public'); 
 } else {
         /* Database config */
-    define('DBNAME', 'if0_41719060_profeqr');
-    define('DBHOST', 'sql100.infinityfree.com');
-    define('DBPORT', '3306');
-    define('DBUSER', 'if0_41719060');
-    define('DBPASS', 'CamosRavero214');
+    define('DBNAME', $_ENV['DBNAME']);
+    define('DBHOST', $_ENV['DBHOST']);
+    define('DBPORT', $_ENV['DBPORT']);
+    define('DBUSER', $_ENV['DBUSER']);
+    define('DBPASS', $_ENV['DBPASS']);
     define('CONTACT_EMAIL', 'tuprofeenqr@gmail.com');
 
    // Detectar si es https o http automáticamente
