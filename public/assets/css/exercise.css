@@ -19,6 +19,21 @@ main {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
+.exercise-container-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 60px;
+    gap: 20px;
+    border-radius: 20px;
+
+    background-color: rgba(255, 255, 255, 0.863);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+
 .exercise-title {
     font-size: 42px;
     font-weight: bold;
@@ -46,6 +61,11 @@ main {
         gap: 20px;
     }
 
+    .exercise-container-2{
+        padding: 20px;
+        gap: 20px;
+    }
+
     .exercise-title {
         font-size: 28px;
     }
@@ -65,4 +85,44 @@ main {
     text-align: left !important; 
     line-height: 1.5 !important;
     margin-bottom: 1rem !important;
+}
+
+.title-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.texto-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-wrap: pretty;
+    font-size: larger;
+    font-family: "Lexend", sans-serif;
+    text-shadow:
+  1px 1px 1px rgba(250, 181, 117, 0.548);
+}
+
+.span-1{
+    color: #ff3300;
+    
+}
+
+.span-2{
+    color: #fc5252;
+    
+}
+
+.span-3{
+    opacity: 80%;
+}
+
+.span-4 {
+    color:rgb(27, 27, 27)
 }
