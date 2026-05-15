@@ -10,8 +10,8 @@ session_set_cookie_params([
     'samesite' => 'Strict' //la cookie no se envia en request de otros sitios
 ]);
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+//$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+//$dotenv->load();
 
 
 /*Arrancamos la sesión, porque siempre vamos a estar haciendo cosas de login en páginas

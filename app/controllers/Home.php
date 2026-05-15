@@ -1,6 +1,7 @@
 <?php
 
-class Home extends Controller {
+class Home extends Controller
+{
 
     public function index()
     {
@@ -14,13 +15,14 @@ class Home extends Controller {
         $this->view('home', $data);
     }
 
-    public function delete(){
+    public function delete()
+    {
 
-        if(!isset($_SESSION['USER'])){
+        if (!isset($_SESSION['USER'])) {
             die("Acceso no autorizado");
         }
 
-        if($_SERVER['REQUEST_METHOD'] == "POST"){
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
             $id = $_POST['id'];
 
@@ -35,11 +37,10 @@ class Home extends Controller {
 
             redirect('home');
         }
-
-
     }
 
-    public function exercise($id) {
+    public function exercise($id)
+    {
 
         $exercise = new Exercise;
 
@@ -48,13 +49,16 @@ class Home extends Controller {
         $exerciseData['exercise'] = $exercise->first($params);
 
 
-        if(!$exerciseData['exercise']) {
+        if (!$exerciseData['exercise']) {
             $this->view('404');
         } else {
-            $this->view('exercise', $exerciseData); 
+            $this->view('exercise', $exerciseData);
         }
-
-    
     }
 
+    public function about()
+    {
+
+        $this->view('about');
+    }
 }
