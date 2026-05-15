@@ -24,7 +24,7 @@
 
         <div class="texto-container">
 
-            <p>Para presentarme, soy <strong> Bruno Ganzero </strong>, estudiante del de <span class="span-1">Educación Física</span> y rover del grupo scout <span class="span-2">San Francisco de Asís.</span></p> </br>
+            <p>Para presentarme, soy <strong> Bruno Ganzero </strong>, estudiante del profesorado de <span class="span-1">Educación Física</span> y rover del grupo scout <span class="span-2">San Francisco de Asís.</span></p> </br>
             <p>El proyecto comenzó en una clase de Campo de la Práctica Docente, cuando una profesora nos dijo: <span class="span-3">“Imagínense cuando las plazas para hacer ejercicio tengan un QR o alguien que te explique cómo realizar los ejercicios”</span>. Automáticamente pensé que era una opción súper viable y comencé a desarrollar la idea, que luego compartí en scout una vez redactada.</p></br>
 
             <p>El movimiento scout fue un <span class="span-2">pilar fundamental</span> en este proyecto, ya que brinda herramientas para que las personas puedan llevar adelante iniciativas orientadas a ayudar a la comunidad, promoviendo valores como el compromiso, el servicio y el trabajo en equipo.</p></br>
