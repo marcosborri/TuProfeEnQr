@@ -4,8 +4,10 @@ Trait Database {
     
     private function connect()
     {
-        $string = "mysql:hostname=".DBHOST.";dbname=".DBNAME.";port=".DBPORT;
+        // Cambiado 'hostname' por 'host' = Acordarse de cambiarlo en copias del framework
+        $string = "mysql:host=".DBHOST.";dbname=".DBNAME.";port=".DBPORT.";charset=utf8";
         $conn = new PDO($string, DBUSER, DBPASS);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Esto ayuda a ver errores de DB
         return $conn;
     }
 

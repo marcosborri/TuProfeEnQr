@@ -1,22 +1,20 @@
 <?php
-/*Archivo encargado de cargar permanentemente las cosas de la carpeta core, estas estan activas 24/7 */
-
-/*Función para cargar todas las clases que llamemos desde modelos */
-spl_autoload_register(function($classname){
-
-    /*Agarramos el file de la clase que necesita ser cargada y lo requerimos */
-    require $filename = "../app/models/".ucfirst($classname).".php";
-
-});
-
-
-/*Cargamos primero la configuración siempre */
+/* Cargar configuración primero */
 require 'config.php';
-
 require 'functions.php';
 
-/*Estas poner siempre en este orden porque Modelo extiende Database, y Controller extiende Modelo */
-require 'Database.php';
-require 'Model.php';
-require 'Controller.php';
-require 'App.php';
+/* Autoload de Modelos */
+spl_autoload_register(function($classname){
+    // Ajustamos la ruta para que sea absoluta respecto a este archivo
+    $file = __DIR__ . "/../models/" . ucfirst($classname) . ".php";
+    
+    if (file_exists($file)) {
+        require $file;
+    }
+});
+
+/* Cargar archivos base con rutas absolutas para evitar errores de nivel */
+require __DIR__ . '/Database.php';
+require __DIR__ . '/Model.php';
+require __DIR__ . '/Controller.php';
+require __DIR__ . '/App.php';

@@ -1,0 +1,116 @@
+body {
+    background-color: #5E6884;
+    background-image: none;
+}
+
+
+main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+
+.upload-container {
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.568);
+    border: 1px solid rgba(27, 36, 38, 0.3);
+
+    width: 100%;
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.upload-title {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    outline: none;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0 15px 0;
+}
+
+.toolbar button {
+    background-color: #FC8021;
+    color: #1B1E26;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar button.active {
+    background-color: #40DBFC;
+}
+
+
+
+#visual-editor {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    min-height: 300px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+
+
+.upload-submit {
+    background-color: #FC8021;
+    color: #1B1E26;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 15px 0 15px 6px;
+}
+
+
+.file-label {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px dashed #ccc;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: #1B1E26;
+    transition: all 0.2s ease;
+}
+
+
+
+.errors {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: red;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/*Para controlar que no se agranden de más los títulos*/
+#visual-editor h2 {
+    font-size: 2rem;
+}
