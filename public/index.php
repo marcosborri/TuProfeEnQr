@@ -1,5 +1,5 @@
 <?php
-//Antes de arrancar la sesión, configuramos las cookies para que sean seguras y eviten guar
+
 
 session_set_cookie_params([
     'lifetime' => 0, // dura hasta cerrar navegador
@@ -10,14 +10,7 @@ session_set_cookie_params([
     'samesite' => 'Strict' //la cookie no se envia en request de otros sitios
 ]);
 
-//$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-//$dotenv->load();
 
-
-/*Arrancamos la sesión, porque siempre vamos a estar haciendo cosas de login en páginas
-  La ventaja de tener una página index es que la sesión siempre se inicia
-  Independientemente de la página en la que estemos, la sesión siempre se va a cargar porque pasa por el índice
-*/
 session_start();
 
 /*Antes de siquiera iniciar la app, cargamos todo lo de init */

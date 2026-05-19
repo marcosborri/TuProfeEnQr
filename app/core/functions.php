@@ -1,5 +1,5 @@
 <?php
-/* función para mostrar la URL */
+
 function show($cosa) {         
 
     echo "<pre>";
